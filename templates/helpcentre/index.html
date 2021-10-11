@@ -2,6 +2,28 @@
 
 {% block content%}
 
-<h1>MEssages page</h1>
+<h1>Messages page</h1>
+
+<p>under construction, this will be linked to single bid view, where users will be able to reach CS and agents reach users back</p>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col"># BID</th>
+        <th scope="col">User</th>
+        <th scope="col">BID LINK</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    {% for b in bookings %}
+        
+        <tr>
+        <th scope="row">{{b.bid}}</th>
+        <td>{{b.created_by}}</td>
+        <td>Link will be here</td>
+        </tr>
+    {%endfor%}
+</tbody>
+</table>
 
 {% endblock %}

@@ -74,6 +74,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# add here db from env, once connecting to heroku plus add other heroku stuff TBD
 
 
 # Password validation

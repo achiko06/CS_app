@@ -6,7 +6,7 @@ from django.dispatch import receiver
 
 User = get_user_model()
 
-class Author(models.Model):
+class Author(models.Model): # add more fields like profile picture, etc. integrate with cloudinary
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     department = models.CharField(max_length=200, null=True, blank=True)
 
@@ -25,7 +25,7 @@ class Theme_label(models.Model):
         return self.name
 
 
-class NPS(models.Model):
+class NPS(models.Model): # needs review, update types, add more fields, later connect this to booking model
     loaded_in_db_timestamp = models.DateTimeField(auto_now_add=True)
     age = models.CharField(max_length=100, null=True, blank=True)
     age_bucket = models.CharField(max_length=100, null=True, blank=True)
@@ -52,3 +52,8 @@ class NPS(models.Model):
    
     def __str__(self):
         return self.bid
+
+    # add here redirect links args, kwargs    
+
+
+# create CSAT model here and connect it to helpcentre model(s)
