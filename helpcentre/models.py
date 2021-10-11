@@ -19,6 +19,8 @@ class Booking(models.Model): #move this to booking app later
         self.slug = slugify(self.bid)
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('helpcentre:helpcentre_home', kwargs={'slug':self.slug})
     # add here redirect links args, kwargs
 
 

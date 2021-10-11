@@ -20,7 +20,9 @@
         <tr>
         <th scope="row">{{b.bid}}</th>
         <td>{{b.created_by}}</td>
-        <td>Link will be here</td>
+        <td>
+           <a href="{% url 'helpcentre:booking_detail' slug=b.slug %}">View Booking</a>
+        </td>
         </tr>
     {%endfor%}
 </tbody>
